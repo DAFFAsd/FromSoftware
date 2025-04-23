@@ -1,4 +1,3 @@
-import fromSoftOffice from '../assets/FromSoft Office.jpg'
 import miyazakiImg from '../assets/Hidetaka_Miyazaki.png'
 
 const About = () => {

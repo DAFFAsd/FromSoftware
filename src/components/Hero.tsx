@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 
-// Import the hero images
 import eldenRingImg from '../assets/EldenRingShadowOfTheErdtree.jpg'
 import armoredCoreImg from '../assets/ArmoredCore.jpeg'
 import eldenRingNightReignImg from '../assets/EldenRingNightReign.png'
@@ -111,7 +110,6 @@ const Hero = () => {
         </div>
       ))}
       
-      {/* Navigation Arrows */}
       <div className="absolute inset-y-0 left-0 flex items-center">
         <button 
           onClick={goToPrevSlide}

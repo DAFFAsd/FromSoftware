@@ -22,10 +22,12 @@ const Navbar = () => {
     setMobileMenuOpen(!mobileMenuOpen)
   }
 
+  const navBgClass = 'bg-black/80 backdrop-blur-md'
+
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
       scrolled || mobileMenuOpen 
-        ? 'bg-black/95 backdrop-blur-md md:bg-black/90' 
+        ? navBgClass 
         : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-6 py-4">
@@ -41,8 +43,8 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
             <a href="#games" className="hover:text-red-600 transition-colors">Games</a>
             <a href="#about" className="hover:text-red-600 transition-colors">About</a>
-            <a href="#news" className="hover:text-red-600 transition-colors">News</a>
-            <a href="#support" className="hover:text-red-600 transition-colors">Support</a>
+            <a href="https://www.fromsoftware.jp/ww/pressrelease.html" target="_blank" rel="noopener noreferrer" className="hover:text-red-600 transition-colors">News</a>
+            <a href="https://www.fromsoftware.jp/ww/faq.html" target="_blank" rel="noopener noreferrer" className="hover:text-red-600 transition-colors">Support</a>
           </div>
           
           <div className="flex items-center space-x-4">
@@ -60,8 +62,8 @@ const Navbar = () => {
       </div>
 
       <div 
-        className={`md:hidden bg-black/95 backdrop-blur-md overflow-hidden transition-all duration-300 ease-in-out ${
-          mobileMenuOpen ? 'max-h-60 opacity-100 border-b border-gray-800/50' : 'max-h-0 opacity-0'
+        className={`md:hidden ${navBgClass} overflow-hidden transition-all duration-300 ease-in-out ${
+          mobileMenuOpen ? 'max-h-60 opacity-100 border-b border-gray-700/30' : 'max-h-0 opacity-0'
         }`}
       >
         <div className="container mx-auto px-6 py-4">
@@ -81,14 +83,18 @@ const Navbar = () => {
               About
             </a>
             <a 
-              href="#news" 
+              href="https://www.fromsoftware.jp/ww/pressrelease.html" 
+              target="_blank" 
+              rel="noopener noreferrer"
               className="py-2 hover:text-red-600 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               News
             </a>
             <a 
-              href="#support" 
+              href="https://www.fromsoftware.jp/ww/faq.html" 
+              target="_blank" 
+              rel="noopener noreferrer"
               className="py-2 hover:text-red-600 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
